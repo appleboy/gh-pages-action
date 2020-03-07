@@ -22,8 +22,6 @@ inputs:
     description: 'directory of content to sync'
   exclude:
     description: 'exclude files matching PATTERN'
-  ssh_key:
-    description: 'private ssh key'
   commit_author:
     description: 'git author name'
   commit_author_email:
@@ -32,9 +30,6 @@ inputs:
     description: 'git remote url'
   workspace:
     description: 'git clone path'
-  netrc_machine:
-    description: 'netrc machine'
-    default: 'github.com'
 runs:
   using: 'docker'
   image: 'Dockerfile'
