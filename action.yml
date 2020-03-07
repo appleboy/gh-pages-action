@@ -33,7 +33,7 @@ inputs:
   workspace:
     description: 'git clone path'
   netrc_machine:
-    description: 'etrc machine'
+    description: 'netrc machine'
     default: 'github.com'
 runs:
   using: 'docker'
