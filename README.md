@@ -26,8 +26,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         remote_url: https://github.com/appleboy/gh-pages-action.git
-        commit_author: Bo-Yi Wu
-        commit_author_email: appleboy.tw@gmail.com
 ```
 
 Please create your own [Personal Access Token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) on GitHub setting page and set the password as access token not your account password.
@@ -77,8 +75,8 @@ See [action.yml](./action.yml) for more detailed information.
 * pages_directory - directory of content to publish, default is `docs`
 * target_directory - directory of content to sync
 * exclude - exclude files matching PATTERN
-* commit_author - git author name
-* commit_author_email - git author email
+* commit_author - git author name, default is `GitHub Action`
+* commit_author_email - git author email, default is `github-action@users.noreply.github.com`
 * remote_url - git remote url
 * workspace - git clone path
 
@@ -93,8 +91,6 @@ Deploy to target directory.
     username: ${{ secrets.USERNAME }}
     password: ${{ secrets.PASSWORD }}
     remote_url: https://github.com/appleboy/gh-pages-action.git
-    commit_author: Bo-Yi Wu
-    commit_author_email: appleboy.tw@gmail.com
     target_directory: 2020
 ```
 
@@ -107,8 +103,20 @@ Custom ignore list you don't want to sync.
     username: ${{ secrets.USERNAME }}
     password: ${{ secrets.PASSWORD }}
     remote_url: https://github.com/appleboy/gh-pages-action.git
-    commit_author: Bo-Yi Wu
-    commit_author_email: appleboy.tw@gmail.com
     target_directory: ignore
     exclude: ignore.html
+```
+
+custom author email and name:
+
+```yaml
+- name: deploy to target directory
+  uses: ./
+  with:
+    username: ${{ secrets.USERNAME }}
+    password: ${{ secrets.PASSWORD }}
+    remote_url: https://github.com/appleboy/gh-pages-action.git
+    commit_author: foo
+    commit_author_email: bar@foobar.com
+    target_directory: 2020
 ```

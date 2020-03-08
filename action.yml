@@ -24,8 +24,10 @@ inputs:
     description: 'exclude files matching PATTERN'
   commit_author:
     description: 'git author name'
+    default: 'GitHub Action'
   commit_author_email:
     description: 'git author email'
+    default: 'github-action@users.noreply.github.com'
   remote_url:
     description: 'git remote url'
   workspace:
