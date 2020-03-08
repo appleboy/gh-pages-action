@@ -15,8 +15,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         remote_url: https://github.com/appleboy/gh-pages-action.git
-        commit_author: Bo-Yi Wu
-        commit_author_email: appleboy.tw@gmail.com
 
     - name: deploy to target directory
       uses: ./
@@ -24,8 +22,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         remote_url: https://github.com/appleboy/gh-pages-action.git
-        commit_author: Bo-Yi Wu
-        commit_author_email: appleboy.tw@gmail.com
         target_directory: 2020
 
     - name: exclude list
@@ -34,7 +30,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         remote_url: https://github.com/appleboy/gh-pages-action.git
-        commit_author: Bo-Yi Wu
-        commit_author_email: appleboy.tw@gmail.com
         target_directory: ignore
         exclude: ignore.html
