@@ -30,7 +30,7 @@ jobs:
         commit_author_email: appleboy.tw@gmail.com
 ```
 
-Please create your own [Personal Access Token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) on GitHub setting page.
+Please create your own [Personal Access Token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) on GitHub setting page and set the password as access token not your account password.
 
 ![token](./images/Personal_Access_Tokens.png)
 
