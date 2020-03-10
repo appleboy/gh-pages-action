@@ -68,7 +68,7 @@ To https://github.com/***/gh-pages-action.git
 See [action.yml](./action.yml) for more detailed information.
 
 * username - github username
-* password - github password or your personal access token
+* password - github password or [create your personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
 * upstream_name - git upstream to target, default is `origin`
 * target_branch - git branch to target, default is `gh-pages`
 * temporary_base - temporary directory for pages pull, default is `.tmp`
