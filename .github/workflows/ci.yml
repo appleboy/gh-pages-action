@@ -1,5 +1,9 @@
 name: Deploy the static file to GitHub Page
 on: [push]
+
+permissions:
+  contents: write
+
 jobs:
 
   build:
@@ -12,23 +16,23 @@ jobs:
     - name: deploy docs
       uses: ./
       with:
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+        username: github-actions[bot]
+        password: ${{ secrets.GITHUB_TOKEN }}
         remote_url: https://github.com/appleboy/gh-pages-action.git
 
     - name: deploy to target directory
       uses: ./
       with:
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+        username: github-actions[bot]
+        password: ${{ secrets.GITHUB_TOKEN }}
         remote_url: https://github.com/appleboy/gh-pages-action.git
         target_directory: 2020
 
     - name: exclude list
       uses: ./
       with:
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+        username: github-actions[bot]
+        password: ${{ secrets.GITHUB_TOKEN }}
         remote_url: https://github.com/appleboy/gh-pages-action.git
         commit_author: Bo-Yi Wu
         commit_author_email: appleboy.tw@gmail.com
