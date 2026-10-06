@@ -1,5 +1,7 @@
 name: Deploy the static file to GitHub Page
-on: [push]
+on:
+  push:
+    branches: [master]
 
 permissions:
   contents: write
